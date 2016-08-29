@@ -1,0 +1,41 @@
+{
+  "name": "solid-object",
+  "version": "1.0.0",
+  "description": "A class with state and props management.",
+  "main": "build/index.js",
+  "scripts": {
+    "precommit": "npm test",
+    "prepush": "npm test",
+    "test": "npm run build && jest",
+    "build": "babel -o build/index.js src/SolidObject.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erremauro/solid-object.git"
+  },
+  "keywords": [
+    "object",
+    "props",
+    "state",
+    "react",
+    "solid"
+  ],
+  "author": "Roberto Mauro <erremauro@icloud.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erremauro/solid-object/issues"
+  },
+  "homepage": "https://github.com/erremauro/solid-object#readme",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-transform-class-properties": "^6.11.5",
+    "babel-preset-es2015": "^6.14.0",
+    "eslint": "~3.4.0",
+    "husky": "^0.11.6",
+    "jest-cli": "^14.1.0",
+    "jsdoc": "^3.4.0",
+    "jsdoc-babel": "^0.2.1",
+    "jsdoc-to-markdown": "^1.3.7"
+  }
+}

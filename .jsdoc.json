@@ -1,0 +1,38 @@
+{
+  "plugins": [
+    "plugins/markdown",
+    "node_modules/jsdoc-babel"
+  ],
+  "babel": {
+    "extensions": [
+      "js",
+      "jsdoc"
+    ],
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-class-properties"
+    ]
+  },
+  "source": {
+    "include": [
+      "./src"
+    ],
+    "exclude": [
+      "./node_modules",
+      "./__tests__",
+      "./build",
+      "./examples",
+      "./src/api.jsdoc"
+    ],
+    "includePattern": ".+\\.js(doc)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "opts": {
+    "encoding": "utf8",
+    "destination": "./docs",
+    "recurse": true,
+    "private": true
+  }
+}

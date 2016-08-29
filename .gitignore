@@ -1,0 +1,7 @@
+.env
+__*.js
+coverage
+jsdocs
+no_flow
+node_modules
+report
