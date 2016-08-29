@@ -4,11 +4,11 @@ A class with state and props management.
 
 ## Install
 
-  git clone https://github/erremauro/solid-object.git
+    git clone https://github/erremauro/solid-object.git
 
 ## Why
 
-Sometimes you just need of those.
+Sometimes you just need one of those.
 
 <a name="module_SolidObject"></a>
 
