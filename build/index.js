@@ -19,7 +19,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @module    SolidObject
  * @author    Roberto Mauro <erremauro@icloud.com>
  * @license   {@link http://unlicense.org|The Unlicense}
- * @version   1.0.0
+ * @version   1.0.1
  * @since     1.0.0
  *
  */
@@ -32,11 +32,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  * @function
  * @inner
  * @returns {undefined}
+ * @version   1.0.1
+ * @since     1.0.0
  */
 function guid() {
   var s4 = function s4() {
     return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
   };
+
   return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
 }
 
