@@ -1,6 +1,7 @@
-var libPath = '../build/index.js'
+var libPath = '../build/SolidObject.js'
 
 jest.unmock( libPath )
+jest.unmock( '../build/merge' )
 
 var SolidObject = null
 
@@ -44,6 +45,45 @@ describe( 'SolidObject', function () {
       var defaultProps = { name: 'default props' }
       var solidObject = new SolidObject( null, defaultProps )
       expect( solidObject.props ).toEqual( defaultProps )
+    })
+
+    it( 'should merge complex properties', function () {
+      var initProps = {
+        name: 'test',
+        version: '0.0.1',
+        module: {
+          author: {
+            name: 'Franz',
+            email: 'frank@gmail.com',
+            homepage: 'frankface.com'
+          }
+        }
+      }
+
+      var newProps = {
+        module: {
+          author: {
+            name: 'Frank'
+          }
+        }
+      }
+
+      var solidObject = new SolidObject( initProps )
+      solidObject.setProps( newProps )
+
+      var expected = {
+        name: 'test',
+        version: '0.0.1',
+        module: {
+          author: {
+            name: 'Frank',
+            email: 'frank@gmail.com',
+            homepage: 'frankface.com'
+          }
+        }
+      }
+
+      expect( expected ).toEqual( solidObject.props )
     })
   })
 })

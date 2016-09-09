@@ -59,11 +59,13 @@ function guid() {
  */
 var Symbols = {
   state: Symbol('__state__'),
-  props: Symbol(' __props__'),
+  props: Symbol('__props__'),
   key: Symbol('__key__'),
   defaults: Symbol('__defaults__'),
   solid: Symbol('__solid__')
 };
+
+var merge = require('./merge');
 
 /**
  * @name module:SolidObject~SolidObject
@@ -126,7 +128,7 @@ var SolidObject = function () {
 
       if (this.propsShouldUpdate()) {
         props = this.propsWillUpdate(props);
-        this[Symbols.props] = Object.assign(this.props, props);
+        this[Symbols.props] = merge(this.props, props);
         this.propsDidUpdate();
       }
 
