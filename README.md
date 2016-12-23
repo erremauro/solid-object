@@ -4,7 +4,7 @@ A class with state and props management.
 
 ## Install
 
-    git clone https://github/erremauro/solid-object.git
+    git clone https://github.com/erremauro/solid-object.git
 
 ## Why
 
